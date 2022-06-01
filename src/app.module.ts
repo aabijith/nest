@@ -11,7 +11,7 @@ import { UsersModule } from "./users/users.module";
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ envFilePath: "./.env" }),
+    ConfigModule.forRoot({ envFilePath: "./.env", isGlobal: true }),
     UsersModule,
     PassportModule,
     MongooseModule.forRoot(
